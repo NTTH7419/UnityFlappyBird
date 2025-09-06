@@ -21,7 +21,7 @@ public class PipeMiddleScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (logic.isRunning && collision.gameObject.layer == 3)
         {
             logic.addScore();
             audioSource.PlayOneShot(scoreSound);
